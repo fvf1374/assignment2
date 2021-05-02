@@ -1,3 +1,11 @@
+
+#The first function, makeCacheMatrix creates a special "matrix", which is really a list containing a function to
+
+#1. set the value of the vector
+#2. get the value of the vector
+#3. set the value of the mean
+#4. get the value of the mean
+
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -13,6 +21,8 @@ makeCacheMatrix <- function(x = matrix()) {
   
 }
 
+#The second function calculates the inverse of the special "matrix" created with the above function.
+
 cacheSolve <- function(x, ...) {
   m <- x$getsolve()
   if(!is.null(m)) {
@@ -24,6 +34,9 @@ cacheSolve <- function(x, ...) {
   x$setsolve(m)
   m
 }
+
+
+#That is an example to check above functions
 
 a1 <- c(3, 2, 5) 
 a2 <- c(2, 3, 2) 
